@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Side Menu View Controller-->
+        <scene sceneID="Y0G-Ej-V4R">
+            <objects>
+                <viewController storyboardIdentifier="SideMenuViewController" id="4Dd-ou-KaM" customClass="SideMenuViewController" customModule="HauteCurator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="St8-hc-OxO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKN-qo-QUH">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9wc-xJ-HYp"/>
+                                </constraints>
+                                <state key="normal" title="Events"/>
+                                <connections>
+                                    <action selector="actionEvents" destination="4Dd-ou-KaM" eventType="touchUpInside" id="HUQ-cU-Tw6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="786-RJ-eMo">
+                                <rect key="frame" x="0.0" y="567" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PFs-53-DpL"/>
+                                </constraints>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="actionSettings" destination="4Dd-ou-KaM" eventType="touchUpInside" id="fPC-RT-Fhr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1I-vD-CnB">
+                                <rect key="frame" x="0.0" y="517" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SPy-vv-iNo"/>
+                                </constraints>
+                                <state key="normal" title="Profile"/>
+                                <connections>
+                                    <action selector="actionProfile" destination="4Dd-ou-KaM" eventType="touchUpInside" id="T7t-lh-rrA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chd-q4-Gz0">
+                                <rect key="frame" x="0.0" y="467" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="adZ-bB-ilr"/>
+                                </constraints>
+                                <state key="normal" title="Payment"/>
+                                <connections>
+                                    <action selector="actionPayment" destination="4Dd-ou-KaM" eventType="touchUpInside" id="1Ma-Qt-fH9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58169471149999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="786-RJ-eMo" firstAttribute="leading" secondItem="IG3-Kb-k4h" secondAttribute="leading" id="24u-I9-p5c"/>
+                            <constraint firstItem="Chd-q4-Gz0" firstAttribute="leading" secondItem="IG3-Kb-k4h" secondAttribute="leading" id="5C6-p6-hrV"/>
+                            <constraint firstItem="786-RJ-eMo" firstAttribute="top" secondItem="h1I-vD-CnB" secondAttribute="bottom" id="6Va-fg-rSO"/>
+                            <constraint firstItem="IG3-Kb-k4h" firstAttribute="trailing" secondItem="Chd-q4-Gz0" secondAttribute="trailing" id="86z-p3-E29"/>
+                            <constraint firstItem="h1I-vD-CnB" firstAttribute="top" secondItem="Chd-q4-Gz0" secondAttribute="bottom" id="O90-vG-leL"/>
+                            <constraint firstItem="IG3-Kb-k4h" firstAttribute="bottom" secondItem="WKN-qo-QUH" secondAttribute="bottom" id="RCo-Pc-59U"/>
+                            <constraint firstItem="IG3-Kb-k4h" firstAttribute="trailing" secondItem="WKN-qo-QUH" secondAttribute="trailing" id="Vrp-Nx-g0b"/>
+                            <constraint firstItem="WKN-qo-QUH" firstAttribute="leading" secondItem="IG3-Kb-k4h" secondAttribute="leading" id="c8d-2E-9GC"/>
+                            <constraint firstItem="WKN-qo-QUH" firstAttribute="top" secondItem="786-RJ-eMo" secondAttribute="bottom" id="gdv-4W-bgw"/>
+                            <constraint firstItem="h1I-vD-CnB" firstAttribute="leading" secondItem="IG3-Kb-k4h" secondAttribute="leading" id="njz-cl-gAy"/>
+                            <constraint firstItem="IG3-Kb-k4h" firstAttribute="trailing" secondItem="786-RJ-eMo" secondAttribute="trailing" id="rTb-xh-dOD"/>
+                            <constraint firstItem="IG3-Kb-k4h" firstAttribute="trailing" secondItem="h1I-vD-CnB" secondAttribute="trailing" id="vYk-R1-9D9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IG3-Kb-k4h"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1f-LH-LcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="121"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_ServiceOrientedArchitecture {
+  umbrella header "Pods-ServiceOrientedArchitecture-umbrella.h"
+
+  export *
+  module * { export * }
+}

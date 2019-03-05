@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Payment Options View Controller-->
+        <scene sceneID="dnz-Kp-My9">
+            <objects>
+                <viewController storyboardIdentifier="PaymentOptionsViewController" id="F7g-hZ-5Wl" customClass="PaymentOptionsViewController" customModule="HauteCurator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d8j-7s-6iv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ich-pp-UuR">
+                                <rect key="frame" x="123.5" y="45" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMX-pQ-m6Z">
+                                <rect key="frame" x="16" y="40" width="34" height="31"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="actionBack" destination="F7g-hZ-5Wl" eventType="touchUpInside" id="NT2-aQ-3pD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvs-FC-1fG">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nXQ-wO-pOL"/>
+                                </constraints>
+                                <state key="normal" title="Add payment method"/>
+                                <connections>
+                                    <action selector="actionAddPaymentOption" destination="F7g-hZ-5Wl" eventType="touchUpInside" id="ZPF-Lx-Da1"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WMZ-ak-iL6">
+                                <rect key="frame" x="0.0" y="86" width="375" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vvs-FC-1fG" firstAttribute="top" secondItem="WMZ-ak-iL6" secondAttribute="bottom" id="0Sa-Xi-4Tv"/>
+                            <constraint firstItem="Vvs-FC-1fG" firstAttribute="leading" secondItem="jDt-DD-DmW" secondAttribute="leading" id="67h-4T-pfC"/>
+                            <constraint firstItem="jDt-DD-DmW" firstAttribute="trailing" secondItem="Vvs-FC-1fG" secondAttribute="trailing" id="8G3-N5-oDw"/>
+                            <constraint firstItem="jDt-DD-DmW" firstAttribute="bottom" secondItem="Vvs-FC-1fG" secondAttribute="bottom" id="Ekn-Io-QrX"/>
+                            <constraint firstItem="Ich-pp-UuR" firstAttribute="top" secondItem="jDt-DD-DmW" secondAttribute="top" constant="25" id="N3l-ky-S93"/>
+                            <constraint firstItem="jMX-pQ-m6Z" firstAttribute="top" secondItem="jDt-DD-DmW" secondAttribute="top" constant="20" id="ObO-sk-mWS"/>
+                            <constraint firstItem="jMX-pQ-m6Z" firstAttribute="centerY" secondItem="Ich-pp-UuR" secondAttribute="centerY" id="Pbb-Pj-fVa"/>
+                            <constraint firstItem="jMX-pQ-m6Z" firstAttribute="leading" secondItem="jDt-DD-DmW" secondAttribute="leading" constant="16" id="Sdg-4b-VvK"/>
+                            <constraint firstItem="jDt-DD-DmW" firstAttribute="trailing" secondItem="WMZ-ak-iL6" secondAttribute="trailing" id="X8E-iM-5WE"/>
+                            <constraint firstItem="WMZ-ak-iL6" firstAttribute="top" secondItem="Ich-pp-UuR" secondAttribute="bottom" constant="20" id="d1c-gD-sPn"/>
+                            <constraint firstItem="WMZ-ak-iL6" firstAttribute="leading" secondItem="jDt-DD-DmW" secondAttribute="leading" id="hDr-qq-9kR"/>
+                            <constraint firstItem="Ich-pp-UuR" firstAttribute="centerX" secondItem="jDt-DD-DmW" secondAttribute="centerX" id="yHf-o9-CFD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jDt-DD-DmW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sCj-x8-Huf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="66"/>
+        </scene>
+        <!--Add Payment Option View Controller-->
+        <scene sceneID="I48-wx-AkT">
+            <objects>
+                <viewController storyboardIdentifier="AddPaymentOptionViewController" id="PjE-E2-sfp" customClass="AddPaymentOptionViewController" customModule="HauteCurator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hp0-Qd-oKc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add payment method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mv7-CG-M5s">
+                                <rect key="frame" x="105" y="45" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkX-EM-euE">
+                                <rect key="frame" x="16" y="40" width="34" height="31"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="actionBack" destination="F7g-hZ-5Wl" eventType="touchUpInside" id="m77-qO-6mr"/>
+                                    <action selector="actionBack" destination="PjE-E2-sfp" eventType="touchUpInside" id="xX8-KQ-KjF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81568627449999997" green="0.88564701000000001" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VkX-EM-euE" firstAttribute="centerY" secondItem="Mv7-CG-M5s" secondAttribute="centerY" id="DoF-Kh-2uA"/>
+                            <constraint firstItem="VkX-EM-euE" firstAttribute="top" secondItem="ObQ-YL-odY" secondAttribute="top" constant="20" id="XPC-Ck-vB7"/>
+                            <constraint firstItem="Mv7-CG-M5s" firstAttribute="centerX" secondItem="ObQ-YL-odY" secondAttribute="centerX" id="agu-iP-NMk"/>
+                            <constraint firstItem="Mv7-CG-M5s" firstAttribute="top" secondItem="ObQ-YL-odY" secondAttribute="top" constant="25" id="dLe-iG-STw"/>
+                            <constraint firstItem="VkX-EM-euE" firstAttribute="leading" secondItem="ObQ-YL-odY" secondAttribute="leading" constant="16" id="kOE-IL-rWz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ObQ-YL-odY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAD-VS-oL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="65"/>
+        </scene>
+    </scenes>
+</document>

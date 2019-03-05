@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Events List View Controller-->
+        <scene sceneID="5PV-Mo-Zei">
+            <objects>
+                <viewController storyboardIdentifier="EventsListViewController" id="B6N-8h-eor" customClass="EventsListViewController" customModule="HauteCurator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cYt-eA-yja">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBv-1L-Ugl">
+                                <rect key="frame" x="148.5" y="45" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjf-JW-XDI">
+                                <rect key="frame" x="16" y="40" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="actionBack" destination="B6N-8h-eor" eventType="touchUpInside" id="4Te-mh-zO4"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oRD-fW-I86">
+                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lBv-1L-Ugl" firstAttribute="centerX" secondItem="aEm-el-UDM" secondAttribute="centerX" id="5hh-YN-QBi"/>
+                            <constraint firstItem="lBv-1L-Ugl" firstAttribute="top" secondItem="aEm-el-UDM" secondAttribute="top" constant="25" id="7cc-DU-peP"/>
+                            <constraint firstItem="oRD-fW-I86" firstAttribute="top" secondItem="zjf-JW-XDI" secondAttribute="bottom" constant="20" id="9TH-JI-ik4"/>
+                            <constraint firstItem="aEm-el-UDM" firstAttribute="bottom" secondItem="oRD-fW-I86" secondAttribute="bottom" id="Dpd-Lb-PGz"/>
+                            <constraint firstItem="zjf-JW-XDI" firstAttribute="top" secondItem="aEm-el-UDM" secondAttribute="top" constant="20" id="UKB-lb-rc0"/>
+                            <constraint firstItem="zjf-JW-XDI" firstAttribute="leading" secondItem="aEm-el-UDM" secondAttribute="leading" constant="16" id="XCL-hr-8C5"/>
+                            <constraint firstItem="oRD-fW-I86" firstAttribute="leading" secondItem="aEm-el-UDM" secondAttribute="leading" id="aR3-Go-AFz"/>
+                            <constraint firstItem="aEm-el-UDM" firstAttribute="trailing" secondItem="oRD-fW-I86" secondAttribute="trailing" id="zKp-ur-gA0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aEm-el-UDM"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="oRD-fW-I86" id="79d-Xq-lXN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nth-TN-crh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="122"/>
+        </scene>
+        <!--Event Details View Controller-->
+        <scene sceneID="tVA-Vr-z6N">
+            <objects>
+                <viewController storyboardIdentifier="EventDetailsViewController" id="poe-V6-LiY" customClass="EventDetailsViewController" customModule="HauteCurator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tv9-LN-kez">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8U-Ry-6ZS">
+                                <rect key="frame" x="138.5" y="45" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euH-Ak-nNC">
+                                <rect key="frame" x="16" y="40" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="actionBack" destination="poe-V6-LiY" eventType="touchUpInside" id="3l7-8o-c9b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdP-c8-Vg3">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1a2-37-T0p"/>
+                                </constraints>
+                                <state key="normal" title="Buy ticket"/>
+                                <connections>
+                                    <action selector="actionBuyTickets" destination="poe-V6-LiY" eventType="touchUpInside" id="iUt-7l-2Gb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51585266487730064" green="0.16861579754601227" blue="0.35500143788343558" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VdP-c8-Vg3" firstAttribute="leading" secondItem="pvP-eV-Cvd" secondAttribute="leading" id="9oU-xR-8sl"/>
+                            <constraint firstItem="pvP-eV-Cvd" firstAttribute="trailing" secondItem="VdP-c8-Vg3" secondAttribute="trailing" id="Glw-F6-m2w"/>
+                            <constraint firstItem="P8U-Ry-6ZS" firstAttribute="top" secondItem="pvP-eV-Cvd" secondAttribute="top" constant="25" id="HSw-Ip-9Za"/>
+                            <constraint firstItem="euH-Ak-nNC" firstAttribute="top" secondItem="pvP-eV-Cvd" secondAttribute="top" constant="20" id="Tcl-49-LLB"/>
+                            <constraint firstItem="pvP-eV-Cvd" firstAttribute="bottom" secondItem="VdP-c8-Vg3" secondAttribute="bottom" id="gyp-mg-2SG"/>
+                            <constraint firstItem="euH-Ak-nNC" firstAttribute="leading" secondItem="pvP-eV-Cvd" secondAttribute="leading" constant="16" id="hNQ-Tm-Mnd"/>
+                            <constraint firstItem="P8U-Ry-6ZS" firstAttribute="centerX" secondItem="pvP-eV-Cvd" secondAttribute="centerX" id="jnr-BA-X8w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pvP-eV-Cvd"/>
+                    </view>
+                    <connections>
+                        <outlet property="eventNameLabel" destination="P8U-Ry-6ZS" id="VPN-3l-6G1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atl-NE-1bg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="122"/>
+        </scene>
+    </scenes>
+</document>
